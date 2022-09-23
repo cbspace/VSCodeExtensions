@@ -23,6 +23,9 @@
       "include": "#number"
     },
     {
+      "include": "#string"
+    },
+    {
       "include": "#comment"
     }
   ],
@@ -35,12 +38,32 @@
       ]
     },
     "keyword": {
-      "match": "\\b(?:MICROLOK_II\\sPROGRAM|INTERFACE|LOCAL|COMM|BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM)\\b",
-      "name": "keyword.language.microlokii"
+      "patterns": [
+        {
+          "match": "\\b(?:MICROLOK_II\\sPROGRAM|INTERFACE|LOCAL|COMM|BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM)\\b",
+          "name": "keyword.language.microlokii"
+        },
+        {
+          "match": "\\b((NV\\.)?(INPUT|OUTPUT))\\b",
+          "name": "keyword.inputoutput.microlokii"
+        },
+        {
+          "match": "\\b(((END\\s)?BLOCK)|TRIGGERS ON|STALE AFTER)\\b",
+          "name": "keyword.block.microlokii"
+        }
+      ]
     },
     "variable": {
-      "match": "\\b(?:ASSIGN|NV.ASSIGN|TO)\\b",
-      "name": "variable.language.microlokii"
+      "patterns": [
+        {
+        "match": "\\b(?:ASSIGN|NV.ASSIGN|TO)\\b",
+        "name": "variable.language.assign.microlokii"
+        },
+        {
+        "match": "\\b(?:SET|CLEAR)\\b",
+        "name": "variable.language.setclear.microlokii"
+        }
+      ]
     },
     "types": {
       "patterns": [
@@ -65,18 +88,59 @@
           "match": "<>"
         },
         {
+          "name": "keyword.operator.assignment.microlokii",
+          "match": "\\="
+        },
+        {
           "name": "punctuation.semicolon.microlokii",
           "match": ";"
         }
       ]
     },
     "constant": {
-      "match": "\\b(?:true|false|TRUE|FALSE)\\b",
-      "name": "constant.language.microlokii"
+      "patterns": [
+        {
+          "match": "\\b(?:true|false|TRUE|FALSE)\\b",
+          "name": "constant.language.boolean.microlokii"
+        },
+        {
+          "match": "\\b(?:OUT16|IN16)\\b",
+          "name": "constant.language.keywordinout.microlokii"
+        },
+        {
+          "match": "\\b((?:OUT|IN)(_SLOT)?)[1-9]([0-9])?\\b",
+          "name": "constant.language.keywordslot.microlokii"
+        },
+        {
+          "match": "\\b((?:MICROLOK|GENISYS)\\.(?:MASTER|SLAVE))\\b",
+          "name": "constant.language.keywordprotocol.microlokii"
+        },
+        {
+          "match": "\\b(?:NONE|CONSTANT)\\b",
+          "name": "constant.language.keywordlink.microlokii"
+        },
+        {
+          "match": "\\b(?:KILL|CONFIGURE\\.ERROR)\\b",
+          "name": "constant.language.keywordinternal.microlokii"
+        },
+        {
+          "match": "\\b(CPS)\\.(STATUS|ENABLE|OK)\\b",
+          "name": "constant.language.keywordcps.microlokii"
+        },
+        {
+          "match": "\\bLED\\.[1-8]\\b",
+          "name": "constant.language.keywords.led.microlokii"
+        }
+      ]
     },
     "number": {
       "name": "constant.numeric.microlokii",
       "match": "\\b(?<!\\.)[0-9]+\\b(?!\\.)"
+    },
+    "string": {
+      "name": "string.quoted.double.microlokii",
+      "comment": "Only highlight quote characters so string contents can be validated",
+      "match": "(\")"
     },
     "comment": {
       "patterns": [
