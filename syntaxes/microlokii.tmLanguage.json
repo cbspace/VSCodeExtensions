@@ -1,0 +1,101 @@
+{
+  "name": "microlokii",
+  "fileTypes": [
+    "microlokii"
+  ],
+  "patterns": [
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#comment"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "include": "#comment"
+        }
+      ]
+    },
+    "keyword": {
+      "match": "\\b(?:MICROLOK_II\\sPROGRAM|INTERFACE|LOCAL|COMM|BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM)\\b",
+      "name": "keyword.language.microlokii"
+    },
+    "variable": {
+      "match": "\\b(?:ASSIGN|NV.ASSIGN|TO)\\b",
+      "name": "variable.language.microlokii"
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.time.microlokii",
+          "match": "(\\:SEC|\\:MSEC)"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.logic.microlokii",
+          "match": "(\\+|\\*|\\sOR\\s|\\sAND\\s)"
+        },
+        {
+          "name": "keyword.operator.unary.microlokii",
+          "match": "~\\b"
+        },
+        {
+          "name": "keyword.operator.comparison.microlokii",
+          "match": "<>"
+        },
+        {
+          "name": "punctuation.semicolon.microlokii",
+          "match": ";"
+        }
+      ]
+    },
+    "constant": {
+      "match": "\\b(?:true|false|TRUE|FALSE)\\b",
+      "name": "constant.language.microlokii"
+    },
+    "number": {
+      "name": "constant.numeric.microlokii",
+      "match": "\\b(?<!\\.)[0-9]+\\b(?!\\.)"
+    },
+    "comment": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.microlokii"
+            }
+          },
+          "match": "(//).*$\\n?",
+          "name": "comment.line.double-slash.microlokii"
+        },
+        {
+          "begin": "%",
+          "end": "\\\\",
+          "name": "comment.block.precent-backslash.microlokii"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.microlokii"
+}

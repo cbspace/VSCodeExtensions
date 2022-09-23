@@ -1,0 +1,34 @@
+{
+	"name": "microlokii",
+	"displayName": "microlokii",
+	"description": "microlokii language support",
+	"version": "0.0.27",
+	"publisher": "CB",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "microlokii",
+				"aliases": [
+					"microlokii"
+				],
+				"extensions": [
+					".ml2",
+					".mll",
+					".gn2",
+					".gnl"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "microlokii",
+				"scopeName": "source.microlokii",
+				"path": "./syntaxes/microlokii.tmLanguage.json"
+			}
+		]
+	}
+}
