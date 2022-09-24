@@ -8,6 +8,9 @@
       "include": "#keyword"
     },
     {
+      "include": "#function"
+    },
+    {
       "include": "#variable"
     },
     {
@@ -40,16 +43,44 @@
     "keyword": {
       "patterns": [
         {
-          "match": "\\b(?:MICROLOK_II\\sPROGRAM|INTERFACE|LOCAL|COMM|BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM)\\b",
+          "match": "\\b(?:MICROLOK|GENISYS)_II\\sPROGRAM\\b",
           "name": "keyword.language.microlokii"
         },
         {
-          "match": "\\b((NV\\.)?(INPUT|OUTPUT))\\b",
-          "name": "keyword.inputoutput.microlokii"
+          "match": "\\b(?:INTERFACE|LOCAL|COMM|BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM|FIXED|LOCAL_IO)\\s*\\n",
+          "name": "keyword.language.microlokii"
+        },
+        {
+          "match": "\\b(?:BOOLEAN|(USER\\s)?NUMERIC|SYSTEM)\\s*\\n",
+          "name": "keyword.language.microlokii"
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "match": "\\b(BOARD|TYPE)(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(ADJUSTABLE|FIXED)\\sENABLE(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b((NV\\.)?(INPUT|OUTPUT))(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(LINK|PROTOCOL|ADDRESS)(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE)(?=\\:)",
+          "name": "entity.name.function.microlokii"
         },
         {
           "match": "\\b(((END\\s)?BLOCK)|TRIGGERS ON|STALE AFTER)\\b",
-          "name": "keyword.block.microlokii"
+          "name": "entity.name.function.microlokii"
         }
       ]
     },
@@ -120,7 +151,7 @@
           "name": "constant.language.keywordlink.microlokii"
         },
         {
-          "match": "\\b(?:KILL|CONFIGURE\\.ERROR)\\b",
+          "match": "\\b(?:KILL|CHECKADDRESS|CONFIGURE\\.ERROR)\\b",
           "name": "constant.language.keywordinternal.microlokii"
         },
         {
@@ -129,6 +160,18 @@
         },
         {
           "match": "\\bLED\\.[1-8]\\b",
+          "name": "constant.language.keywords.led.microlokii"
+        },
+        {
+          "match": "\\b(INSTALLATION_ADDRESS|(APPLICATION_DATA|EXECUTIVE_SOFTWARE)_VERSION)\\b",
+          "name": "constant.language.keywords.led.microlokii"
+        },
+        {
+          "match": "\\b(FIXED|VARIABLE)\\s((DEBUG_PORT_(ADDRESS|BAUDRATE))|LOGIC_TIMEOUT)\\b",
+          "name": "constant.language.keywords.led.microlokii"
+        },
+        {
+          "match": "\\bCONFIGURATIONELEMENT_(ADDRESS|(APPLICATION_DATA|EXECUTIVE_SOFTWARE)_VERSION)\\b",
           "name": "constant.language.keywords.led.microlokii"
         }
       ]
