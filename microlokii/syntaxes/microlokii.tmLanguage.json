@@ -47,7 +47,7 @@
           "name": "keyword.language.microlokii"
         },
         {
-          "match": "\\b(?:INTERFACE|LOCAL|COMM|(NV\\.)?BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM|FIXED|LOCAL_IO)\\s*\\n",
+          "match": "\\b(?:INTERFACE|LOCAL|COMM|(NV\\.)?BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|LOG|BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM|FIXED|LOCAL_IO)\\s*\\n",
           "name": "keyword.language.microlokii"
         },
         {
