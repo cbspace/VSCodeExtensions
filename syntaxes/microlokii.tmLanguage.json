@@ -197,6 +197,11 @@
           "name": "comment.line.double-slash.microlokii"
         },
         {
+          "begin": "(/)(\\*)",
+          "end": "(\\*)(/)",
+          "name": "comment.block.slash-star.microlokii"
+        },
+        {
           "begin": "%",
           "end": "\\\\",
           "name": "comment.block.precent-backslash.microlokii"
