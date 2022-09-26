@@ -2,7 +2,7 @@
 	"name": "microlokii",
 	"displayName": "microlokii",
 	"description": "microlokii language support",
-	"version": "0.0.27",
+	"version": "0.0.30",
 	"publisher": "CB",
 	"engines": {
 		"vscode": "^1.67.0"

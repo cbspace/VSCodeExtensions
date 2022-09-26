@@ -47,7 +47,7 @@
           "name": "keyword.language.microlokii"
         },
         {
-          "match": "\\b(?:INTERFACE|LOCAL|COMM|BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM|FIXED|LOCAL_IO)\\s*\\n",
+          "match": "\\b(?:INTERFACE|LOCAL|COMM|(NV\\.)?BOOLEAN\\sBITS|TIMER\\sBITS|LOG\\s+BITS|CONSTANTS|CONFIGURATION|LOGIC\\sBEGIN|END\\sLOGIC|NUMERIC\\sBEGIN|END\\sNUMERIC|END\\sPROGRAM|FIXED|LOCAL_IO)\\s*\\n",
           "name": "keyword.language.microlokii"
         },
         {
@@ -71,15 +71,31 @@
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(LINK|PROTOCOL|ADDRESS)(?=\\:)",
+          "match": "\\b((MII\\.)?ADDRESS)(?=\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE)(?=\\:)",
+          "match": "\\b(LINK|PROTOCOL)(?=\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(((END\\s)?BLOCK)|TRIGGERS ON|STALE AFTER)\\b",
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE|TRANSMITTER\\.INHIBIT|SECURE\\.MODE|MASTER\\.CHECKBACK|PEER\\.ADDRESS)(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(GRANT\\.DELAY|TIME\\.STAMP|CLOCK\\.MASTER|ACK\\.TIMEOUT|HEARTBEAT\\.INTERVAL|INDICATION\\.UPDATE\\.CYCLE)(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(FRAME\\.LENGTH|STATION\\.NAME)(?=\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(END\\sBLOCK|TRIGGERS\\sON|STALE\\sAFTER)\\b",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\bBLOCK\\s",
           "name": "entity.name.function.microlokii"
         }
       ]
@@ -87,11 +103,11 @@
     "variable": {
       "patterns": [
         {
-        "match": "\\b(?:ASSIGN|NV.ASSIGN|TO)\\b",
+        "match": "\\b(?<!\\.)(?:ASSIGN|NV.ASSIGN|TO)\\b(?<!\\.)",
         "name": "variable.language.assign.microlokii"
         },
         {
-        "match": "\\b(?:SET|CLEAR)\\b",
+        "match": "\\b(?<!\\.)(?:SET|CLEAR)\\b(?<!\\.)",
         "name": "variable.language.setclear.microlokii"
         }
       ]
@@ -143,11 +159,11 @@
           "name": "constant.language.keywordslot.microlokii"
         },
         {
-          "match": "\\b((?:MICROLOK|GENISYS)\\.(?:MASTER|SLAVE))\\b",
+          "match": "\\b((?:MICROLOK|GENISYS|S2)\\.(?:MASTER|SLAVE))\\b",
           "name": "constant.language.keywordprotocol.microlokii"
         },
         {
-          "match": "\\b(?:NONE|CONSTANT)\\b",
+          "match": "\\b(?:NONE|CONSTANT|ON|OFF|MII\\.PEER)\\b",
           "name": "constant.language.keywordlink.microlokii"
         },
         {
@@ -182,8 +198,8 @@
     },
     "string": {
       "name": "string.quoted.double.microlokii",
-      "comment": "Only highlight quote characters so string contents can be validated",
-      "match": "(\")"
+      "begin": "(\")",
+      "end": "(\")"
     },
     "comment": {
       "patterns": [
