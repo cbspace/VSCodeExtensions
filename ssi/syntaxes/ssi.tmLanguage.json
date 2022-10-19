@@ -98,7 +98,7 @@
     "constant": {
       "patterns": [
         {
-          "match": "\\s(a|l|f|s|xs|o|c)\\s",
+          "match": "\\b(a|l|f|s|xs|o|c)\\b",
           "name": "constant.language.state.ssi"
         },
         {
