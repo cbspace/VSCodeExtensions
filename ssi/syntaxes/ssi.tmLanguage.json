@@ -1,0 +1,133 @@
+{
+  "name": "ssi",
+  "fileTypes": [
+    "ssi"
+  ],
+  "patterns": [
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#function"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#comment"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "include": "#comment"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "match": "\\b(?:if|then|else)\\b",
+          "name": "keyword.control.ssi"
+        },
+        {
+          "match": "(\\*|\\.|\\\\)",
+          "name": "keyword.control.ssi"
+        },
+
+        {
+          "match": "\\b(?:(cd|d|c)(n|r))\\b",
+          "name": "keyword.language.ssi"
+        },
+        {
+          "match": "\\b(?:(c(n|r)f))\\b",
+          "name": "keyword.language.ssi"
+        },
+        {
+          "match": "\\b(?:(f(n|r)))\\b",
+          "name": "keyword.language.ssi"
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "match": "\\b(set|clear|seq)\\b",
+          "name": "entity.name.function.ssi"
+        },
+        {
+          "match": "\\b\\alt>\\b",
+          "name": "entity.name.function.ssi"
+        },
+        {
+          "match": "(?<=\\*)(?:(R|Q|T|S)\\S+)\\b",
+          "name": "entity.name.function.ssi"
+        }
+      ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick|lp)\\b",
+          "name": "variable.other.signal.ssi"
+        },
+        {
+        "match": "\\bG\\b",
+        "name": "variable.other.telegram.ssi"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.logic.ssi",
+          "match": "\\b(,|or)\\b"
+        }
+      ]
+    },
+    "constant": {
+      "patterns": [
+        {
+          "match": "\\s(a|l|f|s|xs|o|c)\\s",
+          "name": "constant.language.state.ssi"
+        },
+        {
+          "match": "\\b(r|(f)?(y)?y|g)\\b",
+          "name": "constant.language.aspect.ssi"
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.ssi",
+      "match": "\\s[0-9]+\\s"
+    },
+    "comment": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.ssi"
+            }
+          },
+          "match": "^(/).*$\\n?",
+          "name": "comment.line.slash.ssi"
+        },
+        {
+          "match": "\\s(/).*$\\n?",
+          "name": "comment.part.line.slash.ssi"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ssi"
+}
