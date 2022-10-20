@@ -41,6 +41,10 @@
           "name": "keyword.control.ssi"
         },
         {
+          "match": "\\b(?:pass|fail)\\b",
+          "name": "keyword.control.ssi"
+        },
+        {
           "match": "(\\*|\\.|\\\\)",
           "name": "keyword.control.ssi"
         },
@@ -66,7 +70,7 @@
           "name": "entity.name.function.ssi"
         },
         {
-          "match": "\\b\\alt>\\b",
+          "match": "(?<=\\s)(alt>)",
           "name": "entity.name.function.ssi"
         },
         {
