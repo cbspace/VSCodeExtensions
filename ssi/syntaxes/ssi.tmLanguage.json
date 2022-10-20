@@ -45,12 +45,12 @@
           "name": "keyword.control.ssi"
         },
         {
-          "match": "(\\*|\\.|\\\\)",
+          "match": "(\\*|\\.|\\\\|\\'|\\$|(\"))",
           "name": "keyword.control.ssi"
         },
 
         {
-          "match": "\\b(?:(cd|d|c)(n|r))\\b",
+          "match": "\\b(?:((x)?(d|c)|cd)(n|r))\\b",
           "name": "keyword.language.ssi"
         },
         {
@@ -76,13 +76,21 @@
         {
           "match": "(?<=\\*)(?:(R|Q|T|S)\\S+)\\b",
           "name": "entity.name.function.ssi"
+        },
+        {
+          "match": "(?<=\\*)(?:((I|O)[0-9][0-9]))\\b",
+          "name": "entity.name.function.ssi"
+        },
+        {
+          "match": "(?<=\\')(?:(S|P)\\S+)\\b",
+          "name": "entity.name.function.ssi"
         }
       ]
     },
     "variable": {
       "patterns": [
         {
-          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick|lp|foal)\\b",
+          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick|lp|foal|rip)\\b",
           "name": "variable.other.signal.ssi"
         },
         {
