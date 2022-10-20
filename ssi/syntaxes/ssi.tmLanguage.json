@@ -82,7 +82,7 @@
     "variable": {
       "patterns": [
         {
-          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick|lp)\\b",
+          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick|lp|foal)\\b",
           "name": "variable.other.signal.ssi"
         },
         {
