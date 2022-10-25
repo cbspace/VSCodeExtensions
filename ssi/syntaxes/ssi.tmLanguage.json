@@ -45,10 +45,13 @@
           "name": "keyword.control.ssi"
         },
         {
-          "match": "(\\*|\\.|\\\\|\\'|\\$|(\"))",
+          "match": "(\\*|\\.|\\\\|\\'|\\$|(\")|\\#|\\^|\\@)",
           "name": "keyword.control.ssi"
         },
-
+        {
+          "match": "({|})",
+          "name": "keyword.control.ssi"
+        },
         {
           "match": "\\b(?:((x)?(d|c)|cd)(n|r))\\b",
           "name": "keyword.language.ssi"
@@ -59,6 +62,10 @@
         },
         {
           "match": "\\b(?:(f(n|r)))\\b",
+          "name": "keyword.language.ssi"
+        },
+        {
+          "match": "\\b(?:stopped)\\b",
           "name": "keyword.language.ssi"
         }
       ]
@@ -78,6 +85,10 @@
           "name": "entity.name.function.ssi"
         },
         {
+          "match": "(?<=\\^)(?:(T|S)\\S+)\\b",
+          "name": "entity.name.function.ssi"
+        },
+        {
           "match": "(?<=\\*)(?:((I|O)[0-9][0-9]))\\b",
           "name": "entity.name.function.ssi"
         },
@@ -90,11 +101,11 @@
     "variable": {
       "patterns": [
         {
-          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick|lp|foal|rip)\\b",
+          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick(\\+nrr)?|lp|foal|rip|del)\\b",
           "name": "variable.other.signal.ssi"
         },
         {
-        "match": "\\bG\\b",
+        "match": "\\bG([0-9]([0-9])?)?\\b",
         "name": "variable.other.telegram.ssi"
         }
       ]
@@ -114,7 +125,7 @@
           "name": "constant.language.state.ssi"
         },
         {
-          "match": "\\b(r|(f)?(y)?y|g)\\b",
+          "match": "(?<=\\s)(<)?(r|(f)?(y)?y|g)(\\+)?",
           "name": "constant.language.aspect.ssi"
         }
       ]
