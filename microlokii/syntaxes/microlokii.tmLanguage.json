@@ -87,7 +87,7 @@
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(FRAME\\.LENGTH|STATION\\.NAME)(?=\\:)",
+          "match": "\\b(FRAME\\.LENGTH|STATION\\.NAME|TRANSMITTER\\.INHIBIT)(?=\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
@@ -103,11 +103,11 @@
     "variable": {
       "patterns": [
         {
-        "match": "\\b(?<!\\.)(?:ASSIGN|NV.ASSIGN|TO)\\b(?<!\\.)",
+        "match": "\\b(?<!\\.)(?:ASSIGN|NV.ASSIGN|TO)\\b(?!\\.)",
         "name": "variable.language.assign.microlokii"
         },
         {
-        "match": "\\b(?<!\\.)(?:SET|CLEAR)\\b(?<!\\.)",
+        "match": "\\b(?<!\\.)(?:SET|CLEAR)\\b(?!\\.)",
         "name": "variable.language.setclear.microlokii"
         }
       ]
@@ -151,7 +151,7 @@
           "name": "constant.language.boolean.microlokii"
         },
         {
-          "match": "\\b(?:OUT16|IN16)\\b",
+          "match": "\\b(?:OUT16|IN16|NV\\.IN32\\.OUT32)\\b",
           "name": "constant.language.keywordinout.microlokii"
         },
         {
@@ -163,7 +163,7 @@
           "name": "constant.language.keywordprotocol.microlokii"
         },
         {
-          "match": "\\b(?:NONE|CONSTANT|ON|OFF|MII\\.PEER)\\b",
+          "match": "\\b(?<!\\.)(?:NONE|CONSTANT|ON|OFF|MII\\.PEER)\\b(?!\\.)",
           "name": "constant.language.keywordlink.microlokii"
         },
         {
