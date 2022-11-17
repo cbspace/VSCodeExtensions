@@ -43,7 +43,7 @@
     "keyword": {
       "patterns": [
         {
-          "match": "\\b(?:MICROLOK|GENISYS)_II\\sPROGRAM\\b",
+          "match": "\\b(?:(MICROLOK|GENISYS)_II|MICROLOK|GENISYS\\.2000)\\sPROGRAM\\b",
           "name": "keyword.language.microlokii"
         },
         {

@@ -3,7 +3,7 @@
 	"displayName": "microlokii",
 	"description": "microlokii language support",
 	"license": "GPLv3",
-	"version": "0.0.32",
+	"version": "0.0.33",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/cbspace/VSCodeExtensions/microlokii"
@@ -23,7 +23,11 @@
 					".ml2",
 					".mll",
 					".gn2",
-					".gnl"
+					".gnl",
+					".mlk",
+					".mls",
+					".g2k",
+					".gls"
 				],
 				"configuration": "./language-configuration.json"
 			}

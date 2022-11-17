@@ -10,6 +10,10 @@ To install:
 ## Creating a package file
 Requires:
 - nodejs/npm and vsce (see https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
+- `sudo apt install npm`
+- `sudo npm install -g vsce`
+If you receive a warning about the node version number you will need to update node js:
+https://phoenixnap.com/kb/update-node-js-version
 
 Creating package (Linux)
 - Modify the source files as needed
