@@ -1,7 +1,8 @@
 {
 	"name": "vpi",
-	"displayName": "vpi",
-	"description": "vpi language support",
+	"displayName": "VPI",
+	"description": "VPI language support",
+	"icon": "images/package_icon.png",
 	"license": "GPLv3",
 	"version": "0.0.1",
 	"repository": {

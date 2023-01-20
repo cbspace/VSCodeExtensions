@@ -18,6 +18,7 @@ then
     cp LICENSE.md extension/
     cp package.json extension/
     cp -r syntaxes extension/
+    cp -r images extension/
 
     cd extension
     vsce package

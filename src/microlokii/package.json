@@ -1,9 +1,10 @@
 {
 	"name": "microlokii",
-	"displayName": "microlokii",
-	"description": "microlokii language support",
+	"displayName": "Microlok II",
+	"description": "Microlok II language support",
+	"icon": "images/package_icon.png",
 	"license": "GPLv3",
-	"version": "0.0.33",
+	"version": "0.0.34",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/cbspace/VSCodeExtensions/microlokii"
