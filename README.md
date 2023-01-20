@@ -1,5 +1,5 @@
 # VSCodeExtensions
-Microlok II and SSI extensions for Microsoft VSCode IDE
+Microlok II, SSI and VPI extensions for Microsoft VSCode IDE
 
 ## Installation of pre-packaged files
 To install:
