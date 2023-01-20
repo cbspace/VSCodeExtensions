@@ -3,7 +3,7 @@ Microlok II and SSI extensions for Microsoft VSCode IDE
 
 ## Installation of pre-packaged files
 To install:
-- Download the .vsix file from the packaged folder
+- Download the .vsix file from the "packaged" folder
 - Open extensions in VSCode (Ctrl + Shift + x)
 - Click the 3 dots and choose “Install from VSIX…”
 
@@ -17,4 +17,5 @@ https://phoenixnap.com/kb/update-node-js-version
 
 Creating package (Linux)
 - Modify the source files as needed
+- cd to the src/ directory
 - run `./package_extension.sh [ssi|microlokii]`
