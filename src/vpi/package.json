@@ -1,0 +1,46 @@
+{
+	"name": "vpi",
+	"displayName": "vpi",
+	"description": "vpi language support",
+	"license": "GPLv3",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cbspace/VSCodeExtensions/src/vpi"
+	},
+	"publisher": "CB",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "vpi",
+				"aliases": [
+					"vpi"
+				],
+				"extensions": [
+					".hdw",
+					".prm",
+					".vpc",
+					".vtl",
+					".csi",
+					".css",
+					".log",
+					".nv",
+					".prm",
+					".vc1",
+					".vc2"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vpi",
+				"scopeName": "source.vpi",
+				"path": "./syntaxes/vpi.tmLanguage.json"
+			}
+		]
+	}
+}

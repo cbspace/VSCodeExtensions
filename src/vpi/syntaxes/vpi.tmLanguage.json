@@ -1,0 +1,215 @@
+{
+  "name": "vpi",
+  "fileTypes": [
+    "vpi"
+  ],
+  "patterns": [
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#function"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#comment"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "include": "#comment"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "match": "\\b(?:(INCLUDE|(VPI PROGRAM|APPLICATION PROGRAM|CONTRACT) NUMBER))\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:COPYRIGHT YEAR|SYSTEM SOFTWARE|(CONTRACT|CUSTOMER) NAME|EQUIPMENT LOCATION)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:VITAL OUTPUT FLASHING|(SOFTWARE\\s)?(REVISION|SITE) ID)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:((CSEX(\\s[1-3])?\\s)(ID|PROGRAM NUMBER|SYSTEM SOFTWARE)))\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(SYSTEM STATUS|TRACKER) INTERFACE)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:DATA LOGGING(\\s(INTERFACE|SECTION))?)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:DIAGNOSTIC TERMINAL (TYPE|BAUD RATE|DATA FORMAT))\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(BOOLEAN EQUATION|VPI SYSTEM MODULE) SECTION)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(SERIAL|VPI) COMMUNICATIONS SECTION)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(SOURCE|DESTINATION))\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(CURRENT RESULT|SELF\\-LATCHED PARAMETER|TIMER EXPRESSION RESULT) SECTION)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(BOOLEAN|INTEGER|TIMER) PARAMETER SECTION)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(HARNESS WIRING|BOARD ASSIGNMENT) SUBSECTION)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:FLASH|PULSE(2)?|MODULE|I/O LABEL)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:APPLICATION(\\sLOG MESSAGE)?)\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(TEXT\\s)?((SPECIAL\\s)?CONTROL|INDICATION))\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:(SERIAL PORT [1-4]|DEFAULT BAUD RATE|DATA FORMAT|OPERATING MODE|CONFIGURATION FILE))\\b",
+          "name": "keyword.language.vpi"
+        },
+        {
+          "match": "\\b(?:LOCATION ID|DATA PROTECT|AUTO DUMP|SYSTEM SNAPSHOT PERIOD|PRINT MODE|MSG LOG)\\b",
+          "name": "keyword.language.vpi"
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "match": "\\b(BOARD|TYPE)(?=\\:)",
+          "name": "entity.name.function.vpi"
+        }
+      ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "match": "\\b(?:BOOL|TIME\\sDELAY)\\b",
+          "name": "variable.language.assign.vpi"
+        },
+        {
+          "match": "\\b(?:SLOT [1-9]([0-9])?)\\b",
+          "name": "variable.language.assign.vpi"
+        },
+        {
+          "match": "\\b(?:GROUP (A|B|C|D)|DEBOUNCE)\\b",
+          "name": "variable.language.assign.vpi"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.time.vpi",
+          "match": "(\\sHOURS|\\sMINUTES|\\sSECONDS|MSEC\\.)"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.logic.vpi",
+          "match": "(\\+|(\\b|(?<=(\\))))\\*|\\sOR\\s|\\sAND\\s)"
+        },
+        {
+          "name": "keyword.operator.unary.vpi",
+          "match": "\\.N\\."
+        }
+      ]
+    },
+    "constant": {
+      "patterns": [
+        {
+          "match": "\\b(?<!\\-)(ON|OFF)\\b(?!\\-)",
+          "name": "constant.language.boolean.vpi"
+        },
+        {
+          "match": "\\b(?:(?<=,)N)\\b",
+          "name": "constant.language.nstopbit.vpi"
+        },
+        {
+          "match": "\\b(?:RS\\-232)\\b",
+          "name": "constant.language.proto.vpi"
+        },
+        {
+          "match": "\\b(?:NO HARNESS \\- DIRECT)\\b",
+          "name": "constant.language.harness.vpi"
+        },
+        {
+          "match": "\\b(?:(CSEX[1-3]?|CPU/PD|VRD|DI|DBO|ACO|NV (INPUT|OUTPUT)) BOARD|I/OB 1)\\b",
+          "name": "constant.language.board.vpi"
+        },
+        {
+          "match": "\\b(?:[0-9]+(?=MSEC\\.))",
+          "name": "constant.language.debounce.vpi"
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.vpi",
+      "match": "\\b(?<!\\-)[0-9]+\\b(?!\\-)"
+    },
+    "string": {
+      "name": "string.quoted.double.vpi",
+      "begin": "(\")",
+      "end": "(\")"
+    },
+    "comment": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.vpi"
+            }
+          },
+          "match": "^(\\*).*$\\n?",
+          "name": "comment.line.star.vpi"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.vpi"
+}
