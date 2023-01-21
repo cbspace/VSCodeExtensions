@@ -23,6 +23,8 @@ then
     cd extension
     vsce package
     mv *.vsix ../../../packaged
+    cd ..
+    rm -r extension
 else
     echo "Error: Directory \"$1\" does not exist"
 fi
