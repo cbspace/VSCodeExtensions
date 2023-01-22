@@ -1,0 +1,271 @@
+{
+  "name": "ruggedcom",
+  "fileTypes": [
+    "ruggedcom"
+  ],
+  "patterns": [
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#function"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#comment"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "include": "#comment"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "match": "\\b(?:alarmsCfg|cosCfg|cosDscpCfg|cosPortCfg|cosPriCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:dhcpRelayAgentCfg|dnp3Cfg|ethLinkDetect|ethPortCfg|ethPortRateLimitCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:GatewayCfg|gmrpPortCfg|ipIfCfg|ipServices|ItcsCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:lldpGlobalCfg|lldpPortCfg|LocalSyslogLevelCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:macAddrCfg|macAddrStaticCfg|mcastIgmpCfg|mcastStaticGroups)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:microlokCfg|mirrbitsPortCfg|modbusClientCfg|mstpIdCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:NBootsTable|passwordCfg|portMirrorCfg|preeRawsockPortCfg|radiusCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:rawSocketHostsCfg|rawsockPortCfg|rcdpCfg|RemoteSyslogConfig|RemSyslogClntCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:rmonAlarmCfg|rmonEventCfg|rmonHistoryCfg|rstpCfg|rstpPortCfg|sdaConfigTable)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:serPortCfg|snmpV3AccessCfg|snmpV3UsersCfg|systemId|tacPlusCfg|timeDate)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:TimeSyncSrc|tmbPortCfg|traceCfg|vacmSecurityToGroupCfg|vlanCfg|vlanPortCfg|vlanStaticCfg)\\b",
+          "name": "keyword.language.ruggedcom"
+        },
+        {
+          "match": "\\b(?:((CSEX(\\s[1-3])?\\s)(ID|PROGRAM NUMBER|SYSTEM SOFTWARE)))\\b",
+          "name": "keyword.language.ruggedcom"
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "match": "\\b(?:(System\\s|VLAN\\s)?Name|Latch|Trap|Log|LED&Relay|Refresh Time|(Auth\\s)?Type|ID|Mgmt|IP Address(\\sType)?)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:CoS(\\sWeighting)?|DSCP|Default CoS|Inspect TOS|(Bridge\\s)?Priority|Learning)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Fast Link Detection|(Message\\s|Address\\s)?Aging Timer|Link Stats|Subnet)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:(WIN|TIN)\\s(Mode|Transport|DSCP|IP Port))\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:(IP|Loc|Rem|Source|Target|(Auth\\s)?UDP|(Auxiliary\\s)?TCP|Edge|Forbidden)\\sPort)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:((STP|IP|Forbidden|Router|DHCP Client|PPP Proto|Router|Serial Proto)\\s)?Ports)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:State|AutoN|Speed|Dupx|FlowCtrl|LFI|(Startup\\s)?Alarm|(Ingress|Egress)\\sLimit|Ingress Frames)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Auth\\s(Protocol|Key|TCP Port)|Tx Interval|Tx Hold|Reinit Delay|Tx Delay)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Destination|Gateway|GMRP|(Broadcast|Unicast)\\sAddresses|(ModBus|MAC)\\sAddress)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Admin Status|Notifications|Local Syslog Level|Aging Time|Age Upon Link Loss|VID)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Inactivity Timeout|(Telnet Sessions|Web Server Users|SSH Sessions)\\sAllowed|(TFTP|RSH|WEB)\\sServer)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Mode|Query Interval|Router Forwarding|RSTP Flooding|Forward Exceptions)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Revision Level|NBootsField|(Dyn\\s)?Pack Char|(Dyn\\s)?Pack Timer|Pack Size|Flow Control)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:(Guest|Operator|Admin)\\sUsername|(Guest|Operator|Admin)\\sPassword)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Source Direction|(BPDU Guard\\s)?Timeout|Server|Call Dir|Max Conns|RCDP Discovery|Facility|Severity)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Hello Time|Max Age Time|Transmit Count|Forward Delay|Max Hops|Cost Style)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Index|Variable|Rising Thr|Falling Thr|Interval|Rising Event|Falling Event|Owner)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Community|Description|Requested Buckets|Version Support|eRSTP Enhancements)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Enabled|Disabled|STP Cost|RSTP Cost|Point to Point|Restricted Role|Restricted TCN)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Port Mirroring|Port((\\()s(\\)))?|Transport(\\s(\\()UDP/IP or TCP/IP(\\)))?)",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:(Priv\\s)?Protocol|Remote IP Addr|(IP\\s|(DHCP|NTP) Server\\s)?Address)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:ForceHD|Baud|Data Bits|Stop|Parity|Turnaround|IRIGB|Priv Key|PPP Protocols)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Group|SecurityModel|SecurityLevel|ReadViewName|WriteViewName|NotifyViewName)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Location|Contact|Login Banner|Time Zone|NTP Update Period|Primary Time Source)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Response Timer|Send Exceptions|STP Level|Link Level|Mac Level|IGMP|GVRP|IpFlags)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Serial Protocols|DHCP RelayAgent|8021X|SNMP|EoVDSL|Ip Assignement|TACPLUS|RADIUS|RCDP|Ieee1588)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:VLAN-aware|MSTI|PVID(\\sFormat)?)\\b",
+          "name": "entity.name.function.ruggedcom"
+        }
+        ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "match": "\\b(?:TIME\\sDELAY)\\b",
+          "name": "variable.language.assign.ruggedcom"
+        },
+        {
+          "match": "\\b(?:SLOT [1-9]([0-9])?)\\b",
+          "name": "variable.language.assign.ruggedcom"
+        },
+        {
+          "match": "\\b(?:GROUP (A|B|C|D)|DEBOUNCE)\\b",
+          "name": "variable.language.assign.ruggedcom"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.time.ruggedcom",
+          "match": "\\b(?:[0-9]+\\s(ms|s|min|Mbps))"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.unary.ruggedcom",
+          "match": "\\.N\\."
+        }
+      ]
+    },
+    "constant": {
+      "patterns": [
+        {
+          "match": "\\b(True|False|On|Off|No|Yes|Normal|Medium|High)\\b",
+          "name": "constant.language.boolean.ruggedcom"
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.ruggedcom",
+      "match": "\\b[0-9]+\\b"
+    },
+    "string": {
+      "name": "string.quoted.double.ruggedcom",
+      "begin": "(\")",
+      "end": "(\")"
+    },
+    "comment": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.ruggedcom"
+            }
+          },
+          "match": "^(#).*$\\n?",
+          "name": "comment.line.hash.ruggedcom"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ruggedcom"
+}

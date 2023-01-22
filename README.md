@@ -1,5 +1,5 @@
 # VSCodeExtensions
-Microlok II, SSI and VPI extensions for Microsoft VSCode IDE
+Microlok II, SSI, VPI and Ruggedcom extensions for Microsoft VSCode IDE
 
 ## Installation of pre-packaged files
 To install:
@@ -18,4 +18,4 @@ https://phoenixnap.com/kb/update-node-js-version
 Creating package (Linux)
 - Modify the source files as needed
 - cd to the src/ directory
-- run `./package_extension.sh [ssi|microlokii]`
+- run `./package_extension.sh [ssi|microlokii|vpi|ruggedcom]`

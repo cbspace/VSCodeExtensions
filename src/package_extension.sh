@@ -1,7 +1,7 @@
 # Script to build the VSIX package
 if [ $# -eq 0 ]
 then
-    echo "Usage: ./package_extension.sh [microlokii|ssi|vpi]"
+    echo "Usage: ./package_extension.sh [microlokii|ssi|vpi|ruggedcom]"
     exit 1
 fi
 

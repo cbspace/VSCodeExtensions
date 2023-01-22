@@ -1,0 +1,37 @@
+{
+	"name": "ruggedcom",
+	"displayName": "Ruggedcom",
+	"description": "Ruggedcom RS400 language support",
+	"icon": "images/package_icon.png",
+	"license": "GPLv3",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cbspace/VSCodeExtensions/src/ruggedcom"
+	},
+	"publisher": "CB",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "ruggedcom",
+				"aliases": [
+					"ruggedcom"
+				],
+				"extensions": [
+					".csv"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "ruggedcom",
+				"scopeName": "source.ruggedcom",
+				"path": "./syntaxes/ruggedcom.tmLanguage.json"
+			}
+		]
+	}
+}
