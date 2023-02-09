@@ -4,7 +4,7 @@
 	"description": "Ruggedcom RS400 language support",
 	"icon": "images/package_icon.png",
 	"license": "GPLv3",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/cbspace/VSCodeExtensions/src/ruggedcom"

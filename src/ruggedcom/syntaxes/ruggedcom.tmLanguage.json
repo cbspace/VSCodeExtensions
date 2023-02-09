@@ -79,7 +79,7 @@
           "name": "keyword.language.ruggedcom"
         },
         {
-          "match": "\\b(?:serPortCfg|snmpV3AccessCfg|snmpV3UsersCfg|systemId|tacPlusCfg|timeDate)\\b",
+          "match": "\\b(?:serPortCfg|snmpV3AccessCfg|snmpV3UsersCfg|systemId|tacPlusCfg|timeDateCfg)\\b",
           "name": "keyword.language.ruggedcom"
         },
         {
