@@ -179,11 +179,15 @@
           "name": "entity.name.function.ruggedcom"
         },
         {
-          "match": "\\b(?:STP Cost|RSTP Cost|Point to Point|Restricted Role|Restricted TCN)\\b",
+          "match": "\\b(?:STP Cost|RSTP Cost|Point to Point|Restricted Role|Restricted TCN|Port Mirroring)\\b",
           "name": "entity.name.function.ruggedcom"
         },
         {
-          "match": "\\b(?:Port Mirroring|Port((\\()s(\\)))?|Transport(\\s(\\()UDP/IP or TCP/IP(\\)))?)",
+          "match": "\\b(?<![1-4],)(?:Port((\\()s(\\)))?)\\b",
+          "name": "entity.name.function.ruggedcom"
+        },
+        {
+          "match": "\\b(?:Transport(\\s(\\()UDP/IP or TCP/IP(\\)))?)",
           "name": "entity.name.function.ruggedcom"
         },
         {
@@ -262,7 +266,7 @@
     },
     "number": {
       "name": "constant.numeric.ruggedcom",
-      "match": "\\b[0-9]+\\b"
+      "match": "\\b(?<!Port\\s)[0-9]+(?!\\sbit)\\b"
     },
     "string": {
       "name": "string.quoted.double.ruggedcom",
