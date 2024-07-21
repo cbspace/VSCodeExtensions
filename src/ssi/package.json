@@ -1,10 +1,10 @@
 {
 	"name": "ssi",
 	"displayName": "SSI",
-	"description": "SSI language support",
+	"description": "SSI, Westlock and Smartlock language support",
 	"icon": "images/package_icon.png",
 	"license": "GPLv3",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/cbspace/VSCodeExtensions/ssi"
@@ -22,7 +22,32 @@
 				],
 				"extensions": [
 					".dat",
-					".id"
+					".id",
+					".cip",
+					".dia",
+					".dio",
+					".elt",
+					".flg",
+					".fop",
+					".ipt",
+					".map",
+					".opt",
+					".pfm",
+					".prr",
+					".pts",
+					".qst",
+					".rou",
+					".sig",
+					".tcs",
+					".tfm",
+					".tif",
+					".but",
+					".ind",
+					".pbk",
+					".pod",
+					".ppd",
+					".psd",
+					".ptd"
 				],
 				"configuration": "./language-configuration.json"
 			}
