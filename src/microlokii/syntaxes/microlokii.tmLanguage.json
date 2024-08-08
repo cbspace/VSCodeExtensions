@@ -59,35 +59,35 @@
     "function": {
       "patterns": [
         {
-          "match": "\\b(BOARD|TYPE)(?=\\:)",
+          "match": "\\b(BOARD|TYPE)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(ADJUSTABLE|FIXED)\\sENABLE(?=\\:)",
+          "match": "\\b(ADJUSTABLE|FIXED)\\sENABLE(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b((NV\\.)?(INPUT|OUTPUT))(?=\\:)",
+          "match": "\\b((NV\\.)?(INPUT|OUTPUT))(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b((MII\\.)?ADDRESS)(?=\\:)",
+          "match": "\\b((MII\\.)?ADDRESS)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(LINK|PROTOCOL)(?=\\:)",
+          "match": "\\b(LINK|PROTOCOL)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE|TRANSMITTER\\.INHIBIT|SECURE\\.MODE|MASTER\\.CHECKBACK|PEER\\.ADDRESS)(?=\\:)",
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE|TRANSMITTER\\.INHIBIT|SECURE\\.MODE|MASTER\\.CHECKBACK|PEER\\.ADDRESS)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(ADJUSTABLE|FIXED)\\s(GRANT\\.DELAY|TIME\\.STAMP|CLOCK\\.MASTER|ACK\\.TIMEOUT|HEARTBEAT\\.INTERVAL|INDICATION\\.UPDATE\\.CYCLE)(?=\\:)",
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(GRANT\\.DELAY|TIME\\.STAMP|CLOCK\\.MASTER|ACK\\.TIMEOUT|HEARTBEAT\\.INTERVAL|INDICATION\\.UPDATE\\.CYCLE)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(FRAME\\.LENGTH|STATION\\.NAME|TRANSMITTER\\.INHIBIT)(?=\\:)",
+          "match": "\\b(FRAME\\.LENGTH|STATION\\.NAME|TRANSMITTER\\.INHIBIT)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
