@@ -71,7 +71,7 @@
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b((MII\\.)?ADDRESS)(?=(\\s+)?\\:)",
+          "match": "\\b((ADJUSTABLE|FIXED)\\s)?((MII\\.)?ADDRESS)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
@@ -79,7 +79,11 @@
           "name": "entity.name.function.microlokii"
         },
         {
-          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE|TRANSMITTER\\.INHIBIT|SECURE\\.MODE|MASTER\\.CHECKBACK|PEER\\.ADDRESS)(?=(\\s+)?\\:)",
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(PORT|BAUD|STOPBITS|PARITY|KEY\\.(ON|OFF)\\.DELAY|STALE\\.DATA\\.TIMEOUT|POINT\\.POINT|POLLING\\.INTERVAL|MASTER\\.TIMEOUT)(?=(\\s+)?\\:)",
+          "name": "entity.name.function.microlokii"
+        },
+        {
+          "match": "\\b(ADJUSTABLE|FIXED)\\s(MASTER\\.TIMEOUT|CARRIER\\.MODE|CRC\\.SIZE|TRANSMITTER\\.INHIBIT|SECURE\\.MODE|MASTER\\.CHECKBACK|PEER\\.ADDRESS)(?=(\\s+)?\\:)",
           "name": "entity.name.function.microlokii"
         },
         {
@@ -179,15 +183,19 @@
           "name": "constant.language.keywords.led.microlokii"
         },
         {
-          "match": "\\b(INSTALLATION_ADDRESS|(APPLICATION_DATA|EXECUTIVE_SOFTWARE)_VERSION)\\b",
+          "match": "\\b(INSTALLATION_ADDRESS|(APPLICATION_DATA|EXECUTIVE_SOFTWARE)_VERSION)",
           "name": "constant.language.keywords.led.microlokii"
         },
         {
-          "match": "\\b(FIXED|VARIABLE)\\s((DEBUG_PORT_(ADDRESS|BAUDRATE))|LOGIC_TIMEOUT)\\b",
+          "match": "\\b(FIXED|VARIABLE)\\s((DEBUG_PORT_(ADDRESS|BAUDRATE))|LOGIC_TIMEOUT)(?=(\\s+)?\\:)",
           "name": "constant.language.keywords.led.microlokii"
         },
         {
-          "match": "\\bCONFIGURATIONELEMENT_(ADDRESS|(APPLICATION_DATA|EXECUTIVE_SOFTWARE)_VERSION)\\b",
+          "match": "\\b(SYNCHRONIZATION\\.TIMEOUT)(?=(\\s+)?\\:)",
+          "name": "constant.language.keywords.led.microlokii"
+        },
+        {
+          "match": "\\bCONFIGURATIONELEMENT_(ADDRESS|(APPLICATION_DATA|EXECUTIVE_SOFTWARE)_VERSION)(?=(\\s+)?\\:)",
           "name": "constant.language.keywords.led.microlokii"
         }
       ]
