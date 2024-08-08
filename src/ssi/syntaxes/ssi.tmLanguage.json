@@ -45,7 +45,7 @@
           "name": "keyword.control.ssi"
         },
         {
-          "match": "(\\*|\\.|\\\\|\\'|\\$|(\")|\\#|\\^|\\@)",
+          "match": "(\\*|\\.|\\\\|\\'|\\$|(\")|\\#|\\^|\\@|\\%)",
           "name": "keyword.control.ssi"
         },
         {
@@ -65,6 +65,10 @@
           "name": "keyword.language.ssi"
         },
         {
+          "match": "\\b(?:((x)?(k(n|r))))\\b",
+          "name": "keyword.language.ssi"
+        },
+        {
           "match": "\\b(?:stopped)\\b",
           "name": "keyword.language.ssi"
         }
@@ -81,7 +85,7 @@
           "name": "entity.name.function.ssi"
         },
         {
-          "match": "(?<=\\*)(?:(R|Q|T|S)\\S+)\\b",
+          "match": "(?<=\\*)(?:\\S+)\\b",
           "name": "entity.name.function.ssi"
         },
         {
@@ -101,7 +105,7 @@
     "variable": {
       "patterns": [
         {
-          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick(\\+nrr)?|lp|foal|rip|del)\\b",
+          "match": "\\b(?:bpull|ascon|tisp[0-2]|stick(\\+nrr)?|lp|foal|rip|del|auto)\\b",
           "name": "variable.other.signal.ssi"
         },
         {
@@ -114,7 +118,11 @@
       "patterns": [
         {
           "name": "keyword.operator.logic.ssi",
-          "match": "\\b(,|or)\\b"
+          "match": "\\b(or)\\b"
+        },
+        {
+          "name": "keyword.operator.logic.ssi",
+          "match": "\\s((<)|(>))\\s"
         }
       ]
     },
@@ -125,7 +133,7 @@
           "name": "constant.language.state.ssi"
         },
         {
-          "match": "(?<=\\s)(<)?(r|(f)?(y)?y|g)(\\+)?",
+          "match": "(?<=\\s)((<)|(>))?(r|s|(f)?(y)?y|g)(\\+)?",
           "name": "constant.language.aspect.ssi"
         }
       ]
