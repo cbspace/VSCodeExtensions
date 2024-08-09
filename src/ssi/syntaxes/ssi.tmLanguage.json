@@ -37,7 +37,7 @@
     "keyword": {
       "patterns": [
         {
-          "match": "\\b(?:if|then|else)\\b",
+          "match": "\\b(?:if|then|else|or\\sif)\\b",
           "name": "keyword.control.ssi"
         },
         {
@@ -45,7 +45,7 @@
           "name": "keyword.control.ssi"
         },
         {
-          "match": "(\\*|\\.|\\\\|\\'|\\$|(\")|\\#|\\^|\\@|\\%)",
+          "match": "(\\*|\\.|\\\\|\\'|\\$|(\")|\\#|\\^|\\@|\\%|\\=)",
           "name": "keyword.control.ssi"
         },
         {
@@ -118,7 +118,7 @@
       "patterns": [
         {
           "name": "keyword.operator.logic.ssi",
-          "match": "\\b(or)\\b"
+          "match": "\\b(or)(?!\\sif)\\b"
         },
         {
           "name": "keyword.operator.logic.ssi",
@@ -129,7 +129,7 @@
     "constant": {
       "patterns": [
         {
-          "match": "\\b(a|l|f|s|xs|o|c)\\b",
+          "match": "\\b(a|l|f|s|xs|(o|c)((>)|(<))?)\\b",
           "name": "constant.language.state.ssi"
         },
         {
@@ -139,8 +139,16 @@
       ]
     },
     "number": {
-      "name": "constant.numeric.ssi",
-      "match": "\\s[0-9]+\\s"
+      "patterns": [
+        {
+          "name": "constant.numeric.ssi",
+          "match": "\\s[0-9]+\\s"
+        },
+        {
+          "name": "constant.numeric.ssi",
+          "match": "(?<=\\s(o|c)((>)|(<)))([0-9]+)(?=\\s)"
+        }
+      ]
     },
     "comment": {
       "patterns": [
