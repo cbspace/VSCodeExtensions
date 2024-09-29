@@ -1,5 +1,9 @@
 # VSCodeExtensions
-Microlok II, SSI, VPI and Ruggedcom extensions for Microsoft VSCode IDE
+Microlok II, SSI, VPI and Ruggedcom syntax highlighting extensions for Microsoft VSCode IDE.
+
+
+![Microlok II Code Example](https://github.com/cbspace/VSCodeExtensions/blob/main/images/microlokii_example.jpg?raw=true)
+
 
 ## Installation of pre-packaged files
 To install:
